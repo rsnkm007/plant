@@ -704,3 +704,220 @@ p {
   border: none;
 }
 
+
+
+/* ============================
+   Mobile (up to 768px)
+============================ */
+
+@media screen and (max-width: 768px) {
+
+  body{
+    margin-top: 90px;
+    overflow-x: hidden;
+  }
+
+  /* Background Video */
+
+  .background-video{
+    width: 100%;
+    height: 320px;
+    margin: 0;
+    object-fit: cover;
+  }
+
+  /* Header */
+
+  .header{
+    padding: 12px 20px;
+  }
+
+  .header-middle{
+    display: none;
+  }
+
+  .header-left span{
+    font-size: 20px;
+  }
+
+  .header-right{
+    gap: 15px;
+  }
+
+  /* Hero */
+
+  .earth-single-main{
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .earth-single-main .body{
+    margin: 20px;
+  }
+
+  .earth-exhale{
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .earth-exhale .heading{
+    font-size: 42px;
+  }
+
+  .earth-exhale p{
+    font-size: 15px;
+  }
+
+  .earth-exhale .but-img-span{
+    justify-content: center;
+  }
+
+  /* Floating Plant */
+
+  .earth-single-main .single-plant{
+    margin: 0;
+  }
+
+  /* Headings */
+  .main-headings2{
+    margin-top: 50px;
+  }
+
+  .headings,
+  .headings2{
+    font-size: 22px;
+    padding: 10px 20px;
+  }
+
+  /* Feature Cards */
+
+  .plant-big-left-main,
+  .plant-big-right-main{
+    margin: 20px;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .plant-big-left,
+  .plant-big-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+  }
+
+  .plant-big-left img,
+  .plant-big-right img{
+    position: static;
+    width: 220px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .plant-big-left-content,
+  .plant-big-right-content{
+    position: static;
+    width: 100%;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .plant-big-left-buttons,
+  .plant-big-right-buttons{
+    justify-content: center;
+  }
+
+  /* Plant Grid */
+
+  .plantsgroup{
+    grid-template-columns: 1fr;
+    margin: 0 20px;
+    row-gap: 60px;
+    justify-items: center;
+  }
+
+  .plant{
+    width: 260px;
+    padding: 40px;
+  }
+
+  .plant img{
+    width: 240px;
+    height: auto;
+    left: 30px;
+  }
+
+  /* Customer Reviews */
+
+  .customer-descriptions{
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin: 0 20px;
+    row-gap: 25px;
+  }
+
+  .customer-reviews-container{
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .customer-details{
+    grid-template-columns: 80px 1fr;
+  }
+
+  /* Scroll Plant */
+
+  .scroll-plant{
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 25px;
+    gap: 30px;
+  }
+
+  .scroll-plant img{
+    width: 220px;
+    height: auto;
+    margin: 0;
+  }
+
+  .scroll-plant-content{
+    margin: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Footer */
+
+  .footer-main-container{
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footer-logo-company-description p{
+    width: 100%;
+  }
+
+  .footer-logo-company{
+    justify-content: center;
+  }
+
+  .quick-link{
+    justify-content: center;
+  }
+
+  .update-input{
+    grid-template-columns: 1fr;
+  }
+
+  .update button{
+    width: 100%;
+    height: 45px;
+  }
+
+}
