@@ -1,4 +1,6 @@
 import './App.css'
+import { useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import backgroundVideo from './assets/video1.mp4';
 import treeLogo from './assets/treelogo.png';
 import { FaSearch } from "react-icons/fa";
@@ -55,17 +57,83 @@ function Body() {
 }
 
 function SinglePlant() {
+
+  const plants = [
+    {
+      image: plantImage2,
+      place: "Indoor Plant",
+      name: "Peace Lily"
+    },
+    {
+      image: plantImage3,
+      place: "Indoor Plant",
+      name: "Snake Plant"
+    },
+    {
+      image: plantImage1,
+      place: "Indoor Plant",
+      name: "Aglaonema Plant"
+    }
+  ];
+
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = () => {
+    setCurrent((current + 1) % plants.length);
+  };
+
+  const prevSlide = () => {
+    setCurrent((current - 1 + plants.length) % plants.length);
+  };
+
   return (
-    <>
-      <div className="single-plant">
-        <img src={plantImage2} alt="Plant" />
-        <div className="single-plant-content">
-          <span className="single-plant-place">Indoor Plant</span>
-          <span className="single-plant-name">Aglaonema  plant</span>
-          <button>Buy Now</button>
-        </div>
+    <div className="single-plant">
+
+      <img
+        src={plants[current].image}
+        alt={plants[current].name}
+      />
+
+      <div className="single-plant-content">
+        <span className="single-plant-place">
+          {plants[current].place}
+        </span>
+
+        <span className="single-plant-name">
+          {plants[current].name}
+        </span>
+
+        <button>Buy Now</button>
       </div>
-    </>
+
+      {/* Left Arrow */}
+      <button
+        className="arrow left-arrow"
+        onClick={prevSlide}
+      >
+        <FaChevronLeft />
+      </button>
+
+      {/* Right Arrow */}
+      <button
+        className="arrow right-arrow"
+        onClick={nextSlide}
+      >
+        <FaChevronRight />
+      </button>
+
+      {/* Dots */}
+      <div className="slider-dots">
+        {plants.map((_, index) => (
+          <span
+            key={index}
+            className={current === index ? "dot active" : "dot"}
+            onClick={() => setCurrent(index)}
+          ></span>
+        ))}
+      </div>
+
+    </div>
   );
 }
 

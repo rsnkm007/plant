@@ -194,13 +194,13 @@ p {
 .single-plant {
   width: 180px;
   height: 260px;
-  border: 1px solid white;
+  border: 0.5px solid rgba(164, 207, 164, 1);
   display: flex;
   flex-direction: column;
   align-items: left;
   gap: 10px;
   padding: 30px;
-  background-color: rgba(164, 207, 164, 0.2);
+  background-color: rgba(164, 207, 164, 0.3);
   backdrop-filter: blur(3px);
   border-radius: 50px;
   position: relative;
@@ -250,6 +250,58 @@ p {
 
 .single-plant-name {
   font-size: 22px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .8s;
+}
+
+.arrow:hover{
+    background:white;
+    color:black;
+}
+
+.left-arrow{
+    left:10px;
+}
+
+.right-arrow{
+    right:10px;
+}
+
+.slider-dots{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#bbb;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dot.active{
+    width:25px;
+    border-radius:20px;
+    background:white;
 }
 
 .plant-big-left-main {
@@ -486,9 +538,9 @@ p {
 }
 
 .customer-reviews-container:hover{
-  background-color: rgba(164, 207, 164, 0.3);
+  background-color: rgba(171, 234, 255, 0.3);
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(171, 234, 255, 0.12);
 }
 
 .customer-reviews-container span{
@@ -684,16 +736,18 @@ p {
   padding-left: 10px;
   border: none;
   box-shadow: inset 0 6px 8px rgba(0, 0, 0, 0.35);
+  transition: all 0.8s;
 }
 
 .update .input:focus {
   outline: none;
   border: none;
-
 }
 
 .update button{
   border-radius: 40px;
+  transition: all 0.8s;
+  font-weight: bold;
 }
 
 .update button:hover{
@@ -720,9 +774,10 @@ p {
   /* Background Video */
 
   .background-video{
-    width: 100%;
-    height: 320px;
-    margin: 0;
+    width: 330px;
+    height: 450px;
+    margin-top: 100px;
+    margin-left: 2px;
     object-fit: cover;
   }
 
@@ -866,7 +921,7 @@ p {
   }
 
   .customer-details{
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 120px 1fr;
   }
 
   /* Scroll Plant */
@@ -913,7 +968,7 @@ p {
 
   .update-input{
     grid-template-columns: 1fr;
-  }
+  } 
 
   .update button{
     width: 100%;
